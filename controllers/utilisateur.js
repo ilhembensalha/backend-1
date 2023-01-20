@@ -112,6 +112,7 @@ exports.signup = (req, res, next) => {
                     message: 'utilisateur created !',
                     status: 201,
                     userId: utilisateur._id,
+                    userrole: utilisateur.role,
                     token: jwt.sign(
                       { userId: utilisateur._id },
                       'RANDOM_TOKEN_SECRET',
@@ -136,6 +137,7 @@ exports.signup = (req, res, next) => {
               }
               res.status(200).json({
                 userId: utilisateur._id,
+                userrole: utilisateur.role,
                 token: jwt.sign(
                   { userId: utilisateur._id },
                   'RANDOM_TOKEN_SECRET',
