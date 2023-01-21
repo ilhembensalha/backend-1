@@ -8,8 +8,7 @@ const produitSchema = new mongoose.Schema({
   notes: {type: String, required: true},
   avis: {type: String, required: true},
   fonctionnalités: {type: String, required: true},
-  image: {type: String, required: true},
-
+  image: {type: String, default: "produit.JPG"}
  
 });
 

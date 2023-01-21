@@ -14,6 +14,7 @@ app.use(morgan('dev'));
 
 app.use(bodyParser.urlencoded({ extended:true}));
 app.use(bodyParser.json());
+app.use(express.static('public'));
 mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://0.0.0.0:27017/ecom',
   { useNewUrlParser: true,
